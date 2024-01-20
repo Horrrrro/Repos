@@ -3,12 +3,14 @@
 
 unt main(int argc, char **argv)
 {
-	char name[255];
+	char first[255], last[255];
+	printf("Enter your first name: ");
+	fgets(first, 255, stdin);
+	first[strlen(name)-1] = '\0'; /* rewmove the newline at the end */
 	
-	printf("Enter your name: ");
-	fgets(name, 255, stdin);
-	name[strlen(name)-1] = '\0'; /* rwmovw the newline at the end */
+	printf("Now enter your last name: ")
+	gets(last); /* buffer overflow? What's that? */
 	
-	printf("Hello %s!\n", name);
+	printf("Hello %s %s!\n", first, last);
 	return 0;
 }
